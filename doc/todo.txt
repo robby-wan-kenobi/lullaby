@@ -1,0 +1,150 @@
+TODO
+====
+
+Enhancements
+------------
+
+***- Need to add the model
+	***- Saving playlist
+	***- Loading playlist
+		***- File selection or dialog to select from?
+	***- Adding multiple songs to the playlist
+	
+- Double click to play and to add to playlist
+
+***- Also consider whether to remove the mp3 files afterwards
+	***- It would have to re-convert every time
+	***- It could convert the first one and then convert the rest in the background
+	***- Also, should it convert as it tries to play or all at once?
+	***- When it converts (and creates the mp3), will it update the model to see the mp3 or stay on the m4a?
+	
+***- Have playlist names displayed
+	***- Probably next to "Playlist"
+
+***- Figure out when a song is done
+	***- Maybe look for a new library?
+		***- Could update to new version and use Media/MediaPlayer
+	- *** Use BasicPlayer and BeagleBuddy (http://beaglebuddy.com/)
+***- Figure out how to make playlist work
+	***- Going on to next song, etc.
+	
+***- Adding new songs from file
+	***- How is the structure going to work?
+		***- Should reference files that already exist
+		***- Use map to map name of song to file location
+		***- Convert m4a (and wma?) to mp3 and put them in a local directory
+	***- Convert all m4a songs first?
+	
+***- Connect top options to the rest
+
+- Make error class
+
+12/27/2012
+----------
+
+***- What if there are more songs than what are in the lsl (when loading/viewing the available songs)?
+***- How should we handle adding new songs that aren't in the folder?
+  ***- Get the add song working.
+- Allow looping?
+  - Only if it's done and the time isn't up
+***- Make it not convert if it's already been converted.
+  ***- Convert all in the playlist while playing?
+- Get rid of the line problem.
+***- Connect the timer.
+- Make it so you don't have to save in order for the playlist ORDER to be in effect?
+  - Might be a problem with updating the model.
+- Have it stop when you switch playlists?
+
+1/3/2013
+--------
+
+***- Convert m4a songs when they are imported
+
+1/13/2013
+---------
+
+***- Have config file that saves all the user preferences
+	***- Last used path for adding files from
+	***- Values for play time, etc.
+	***- Default/last used playlist
+	
+- Save settings on application close
+
+1/14/2013
+---------
+
+- Still need to update defaults on application close
+***- Still need to add values for playlist and last path
+
+***- Add functionality for adding multiple files at a time
+
+- Perhaps eventually a drag song to playlist option
+
+- Might want to think more about when to update the "defaults"
+
+1/15/2013
+---------
+
+***- There's some weird stuff with "Skip"...
+
+- Add "Save changes?" dialog when going to new or saved playlist
+
+2/13/2013
+---------
+
+- Fixed the skip stuff by switching audio libraries.
+  - Add note in 'About' section for the new library.
+  - Add WavToMp3 converter since the current library only supports mp3
+  - Maybe think of a WmaToMp3 converter (would need another 3rd party converter)
+
+
+
+Bugs
+----
+
+***- Fix full screen woes
+
+- Fix black line in status bar
+
+
+
+
+Actual list of things to do
+===========================
+***- Get rid of the line problem. (*Solved but might want to take a look at this again)
+
+***- Make it so you don't have to save in order for the playlist ORDER to be in effect? (*It looks like this works)
+  - Might be a problem with updating the model.
+  
+***- Have it stop when you switch playlists? (*Put this in, but do we really want this?)
+
+- Save settings on application close (think more about this)
+
+- Perhaps eventually a drag song to playlist option (*Do we really want this)
+
+- Might want to think more about when to update the "defaults"
+
+- Add "Save changes?" dialog when going to new or saved playlist (particularly for loading)
+  - If you click Cancel, it still goes to the new playlist/clears the current playlist - it shouldn't do anything
+  - So it should do the following:
+    - Click New or Load
+    - Dialog pops up asking whether you want to save
+    - If yes, another dialog pops up asking you what to save it as
+      - Once saved, go on with the original request
+      - If cancel is selected, don't proceed with the original request
+    - If no, go on with the original request
+
+- New library stuff
+  - Maybe think of a WmaToMp3 converter (would need another 3rd party converter)
+
+- Try making a build of the project
+  - Include an installer?
+
+- Make the directories created by the program
+
+- Make fullscreen look better
+
+- Add pause?
+  - Make the play button change to "Pause" once playing and have the correct functionality
+  
+- Add sleep.exe note

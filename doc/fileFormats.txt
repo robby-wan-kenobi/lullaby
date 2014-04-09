@@ -1,0 +1,31 @@
+Save files
+==========
+
+- Playlist name is the name of the file
+- Song names are names of files - keys that map to file location
+
+FileName.lpl
+------------
+SongName1
+SongName2
+SongName3
+...
+
+Songs
+=====
+
+- CSV file for all the available songs
+- Song names are the keys (name of file without the extension)
+- File location are the values
+- Adding a song updates this file and the map
+- This file is loaded into a map on application startup
+
+songs.lsl
+---------
+SongName1, FileLocation
+SongName2, FileLocation
+SongName3, FileLocation
+...
+
+
+
